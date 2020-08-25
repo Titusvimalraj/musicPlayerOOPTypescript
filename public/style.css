@@ -5,3 +5,85 @@ html {
 body {
 	min-height: 100%;
 }
+
+.player-buttons {
+	color: red;
+}
+
+.player {
+	width: 25%;
+}
+
+.player-button {
+	color: blue;
+}
+
+img {
+	width: 100%;
+}
+
+.music-content-container {
+	padding: 10px 10px;
+}
+
+.playlist-card {
+	width: 100%;
+}
+
+.fa-plus-circle {
+	color: green;
+}
+
+.fa-minus-circle {
+	color: red;
+}
+
+.music-list-card {
+	height: 100%;
+}
+
+button:active {
+	outline: none;
+}
+
+/* 
+	Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+	.player {
+		width: 80%;
+	}
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) 
+	*/
+@media only screen and (min-width: 600px) {
+	.player {
+		width: 80%;
+	}
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+
+@media only screen and (min-width: 768px) {
+	.player {
+		width: 60%;
+	}
+}
+
+/* Large devices (laptops/desktops, 992px and up) 
+	*/
+
+@media only screen and (min-width: 992px) {
+	.player {
+		width: 40%;
+	}
+}
+
+/* Extra large devices (large 
+	laptops and desktops, 
+	1200px and up) */
+@media only screen and (min-width: 1200px) {
+	.player {
+		width: 40%;
+	}
+}
