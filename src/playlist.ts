@@ -22,13 +22,13 @@ class Player {
               <div class="card-footer d-flex flex-column align-items-center">
               <button class="btn player-button" onclick="document.getElementById('player').src=\'${url}\';document.getElementById('current-music-player').getElementsByTagName(
                 'img'
-            )[0].src=\"${albumcover.toString()}\"; document.getElementById('current-music-player').getElementsByClassName(
+            )[0].src=\`${albumcover.toString()}\`; document.getElementById('current-music-player').getElementsByClassName(
                 'card-title'
-            )[0].innerHTML=\"${title.toString()}\"; document.getElementById('current-music-player').getElementsByClassName(
+            )[0].innerHTML=\`${title.toString()}\`; document.getElementById('current-music-player').getElementsByClassName(
                 'card-text'
-            )[0].innerHTML=\"${artist.toString()}\"; document.getElementById('current-music-player').getElementsByTagName(
+            )[0].innerHTML=\`${artist.toString()}\`; document.getElementById('current-music-player').getElementsByTagName(
                 'small'
-            )[0].innerHTML=\"${rank.toString()}\"; document.getElementById('player').play();"><i class="far fa-play-circle fa-3x"></i></button>
+            )[0].innerHTML=\`${rank.toString()}\`; document.getElementById('player').play();"><i class="far fa-play-circle fa-3x"></i></button>
               </div>
             </div>
           </div>`;
