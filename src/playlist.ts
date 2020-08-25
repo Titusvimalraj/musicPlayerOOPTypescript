@@ -1,5 +1,5 @@
 class Player {
-	constructor() {}
+	constructor() { }
 
 	addToPlayList(
 		title: string,
@@ -17,8 +17,8 @@ class Player {
 				.replace(/\v/g, "\\v")
 				.replace(/'/g, "\\'")
 				.replace(/"/g, '\\"')
-				.replace(/(/g, "(")
-				.replace(/)/, ")");
+				.replace(/\(/g, "\\(")
+				.replace(/\)/g, "\\)");
 			artist = artist
 				.replace(/\\/g, "\\\\")
 				.replace(/\n/g, "\\n")
@@ -26,8 +26,8 @@ class Player {
 				.replace(/\v/g, "\\v")
 				.replace(/'/g, "\\'")
 				.replace(/"/g, '\\"')
-				.replace(/(/g, "(")
-				.replace(/)/, ")");
+				.replace(/\(/g, "\\(")
+				.replace(/\)/g, "\\)");
 			let playListElementInnerHTML = `   <div class="col-12" id="playList${id}">
             <div class="card playlist-card">
               <div class="card-body">
