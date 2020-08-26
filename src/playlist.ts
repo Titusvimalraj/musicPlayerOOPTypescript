@@ -10,7 +10,7 @@ class Player {
 		rank: string
 	) {
 		if (!(<HTMLElement>document.getElementById(`playList${id}`))) {
-			title = title
+			let titleModified = title
 				.replace(/\\/g, "\\\\")
 				.replace(/\n/g, "\\n")
 				.replace(/\t/g, "\\t")
@@ -19,7 +19,7 @@ class Player {
 				.replace(/"/g, '\\"')
 				.replace(/\(/g, "\\(")
 				.replace(/\)/g, "\\)");
-			artist = artist
+			let artistModified = artist
 				.replace(/\\/g, "\\\\")
 				.replace(/\n/g, "\\n")
 				.replace(/\t/g, "\\t")
@@ -42,9 +42,9 @@ class Player {
                 'img'
             )[0].src=\'${albumcover}\'; document.getElementById('current-music-player').getElementsByClassName(
                 'card-title'
-            )[0].innerHTML=\'${title}\'; document.getElementById('current-music-player').getElementsByClassName(
+            )[0].innerHTML=\'${titleModified}\'; document.getElementById('current-music-player').getElementsByClassName(
                 'card-text'
-            )[0].innerHTML=\'${artist}\'; document.getElementById('current-music-player').getElementsByTagName(
+            )[0].innerHTML=\'${artistModified}\'; document.getElementById('current-music-player').getElementsByTagName(
                 'small'
             )[0].innerHTML=\'${rank}\'; document.getElementById('player').play();"><i class="far fa-play-circle fa-3x"></i></button>
               </div>
