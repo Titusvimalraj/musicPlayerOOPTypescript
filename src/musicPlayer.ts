@@ -1,53 +1,9 @@
 import Playlist from "./playlist";
 import Controls from "./controls";
-interface deezerDataResponse {
-	album: {
-		cover: string;
-		cover_big: string;
-		cover_medium: string;
-		cover_small: string;
-		cover_xl: string;
-		id: number;
-		title: string;
-		tracklist: string;
-		type: string;
-	};
-	artist: {
-		id: number;
-		link: string;
-		name: string;
-		picture: string;
-		picture_big: string;
-		picture_medium: string;
-		picture_small: string;
-		picture_xl: string;
-		tracklist: string;
-		type: string;
-	};
-	duration: number;
-	explicit_content_cover: number;
-	explicit_content_lyrics: number;
-	explicit_lyrics: boolean;
-	id: number;
-	link: string;
-	preview: string;
-	rank: number;
-	readable: true;
-	title: string;
-	title_short: string;
-	title_version: string;
-	type: string;
-}
-
-interface deezerFullResponse {
-	data: deezerDataResponse[];
-	previous: string;
-	next: string;
-	total: number;
-}
-
+import deezerDataResponse from "./deezerDataResponse.model";
+import deezerFullResponse from "./deezerFullResponse.model";
 class MusicPlayer {
-	constructor() {}
+	constructor() { }
 
 	createPlayerCurrentPlayer(
 		albumCover: string = "",
@@ -59,11 +15,10 @@ class MusicPlayer {
 		let controls = new Controls();
 
 		let currentMusicPlayerInnerHTML = ` <div class="card text-center player">
-        <img class="img img-fluid" src="${
-					albumCover != ""
-						? albumCover
-						: "https://www.macworld.co.uk/cmsdata/features/3612963/how_to_get_music_on_iphone_1600home_thumb800.jpg"
-				}" class="card-img-top" alt="Enjoy Listening to Music!">
+        <img class="img img-fluid" src="${albumCover != ""
+				? albumCover
+				: "https://www.macworld.co.uk/cmsdata/features/3612963/how_to_get_music_on_iphone_1600home_thumb800.jpg"
+			}" class="card-img-top" alt="Enjoy Listening to Music!">
         <div class="card-body">
           <h5 class="card-title">${title}</h5>
           <p class="card-text">${artist}</p>
