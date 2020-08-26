@@ -6,6 +6,10 @@ body {
 	min-height: 100%;
 }
 
+.row{
+	width:99%!important;
+}
+
 .player-buttons {
 	color: red;
 }
